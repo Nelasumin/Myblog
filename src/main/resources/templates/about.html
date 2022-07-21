@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head  th:replace="_fragments :: head(~{::title})">
+    <meta charset="UTF-8">
+    <title>关于我</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../static/css/me.css">
+</head>
+<body>
+<!--导航-->
+ <nav th:replace="_fragments :: menu(5)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+    <div class="ui container">
+        <div class="ui inverted secondary stackable menu">
+            <h2 class="ui teal header item">Blog</h2>
+            <a href="#" class="m-item item m-mobile-hide"><i class="home icon"></i>首页</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="idea icon"></i>分类</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i>标签</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="clone icon"></i>归档</a>
+            <a href="#" class="active m-item item m-mobile-hide"><i class="info icon"></i>关于我</a>
+            <div class="right m-item item m-mobile-hide">
+                <div class="ui icon inverted transparent input m-margin-tb-tiny">
+                    <label for="search"></label>
+                    <input type="text" id="search" placeholder="Search...">
+                    <i class="search link icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="ui menu black icon button m-right-top m-mobile-show">
+        <i class="sidebar icon"></i>
+    </a>
+</nav>
+<!--中间-->
+<main class="m-container m-padded-tb-big">
+    <div class="ui container">
+        <div class="ui stackable grid">
+            <div class="eleven wide column">
+                <div class="ui segment">
+                    <img src="images/xingzhimeng.jpg"  alt="" class="ui rounded image">
+                </div>
+            </div>
+            <div class="five wide column">
+                <div class="ui top attached segment">
+                    <div class="ui header">关于我</div>
+                </div>
+                <div class="ui attached segment">
+                    <p class="m-text">哈高翔,一个在校的大学生,21岁软件工程在读,学习苦手.希望可以结交更多对计算机感兴趣的伙伴</p>
+                    <p class="m-text">爱好:/单车/计算机/看书/......</p>
+                </div>
+                <div class="ui attached segment">
+                    <div class="ui orange basic left pointing label">编程</div>
+                    <div class="ui orange basic left pointing label">写作</div>
+                    <div class="ui orange basic left pointing label">思考</div>
+                    <div class="ui orange basic left pointing label">运动</div>
+                </div>
+                <div class="ui attached segment">
+                    <div class="ui teal basic left pointing label m-margin-tb-tiny">Java</div>
+                    <div class="ui teal basic left pointing label m-margin-tb-tiny">机械狗</div>
+                    <div class="ui teal basic left pointing label m-margin-tb-tiny">Stm32</div>
+                    <div class="ui teal basic left pointing label m-margin-tb-tiny">汽车制造</div>
+                    <div class="ui teal basic left pointing label m-margin-tb-tiny">C++</div>
+                </div>
+                <div class="ui bottom attached segment">
+                    <a href="https://github.com/SpiceFree" class="ui circular icon button"><i class="github icon"></i></a>
+                    <a href="#" class="ui circular icon button" id="WeChat" data-content="SmileIslaSky" data-position="bottom center"> <i class="weixin icon"></i></a>
+                    <a href="#" class="ui circular icon button" id="qq" data-content="2648988656" data-position="bottom center"><i class="qq icon"></i></a>
+                </div>
+            <!--    <div id="WeChat-QR" class="ui flowing popup transition hidden">
+                    <img src="../static/images/weixintupian.png" alt="wx" class="ui rounded bordered image" style="width: 100px;">
+                </div>-->
+            </div>
+        </div>
+    </div>
+</main>
+<!--底部-->
+<footer th:replace="_fragments :: footer" class="ui inverted vertical segment m-padded-tb-massive">
+    <div class="ui center aligned container">
+        <div class="ui inverted divided stackable grid">
+            <div class="three wide column">
+                <div class="ui inverted link list">
+                    <div class="item">
+                        <img src="../static/images/wechat.jpg" alt="微信" class="ui rounded image" style="width: 100px;">
+                    </div>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced">最新博客</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">用户故事(User Story)</a>
+                    <a href="#" class="item">用户故事(User Story)</a>
+                    <a href="#" class="item">用户故事(User Story)</a>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced">联系我</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item m-text-thin">Email：spicewwy@outlook.com</a>
+                    <a href="#" class="item m-text-thin">QQ：2648988656</a>
+                </div>
+            </div>
+            <div class="seven wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced">Blog</h4>
+                <p class="m-text-thin m-text-spaced m-opacity-mini">xxxxxxxxxxxxx...</p>
+            </div>
+        </div>
+        <div class="ui inverted section divider"></div>
+        <p class="m-text-thin m-text-spaced m-opacity-tiny">xxxxxxxxxxxxxxx酱</p>
+    </div>
+</footer>
+
+<!--/*/<th:block th:replace="_fragments :: script">/*/-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+
+
+
+<!--/*/</th:block>/*/-->
+
+<!--<script>
+    $("nav a:last-child").click(function(){
+        $(".m-item").toggleClass("m-mobile-hide");
+    })
+    $("#WeChat").popup({
+        popup: $("#WeChat-QR"),
+        on: "hover",
+        position: "bottom center"
+    })
+    $("#qq").popup()
+</script>-->
+</body>
+</html>
